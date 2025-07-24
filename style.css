@@ -120,6 +120,10 @@
     align-items: center;
     gap: 10px;
 }
+.banner-image{
+    width: 100vw;
+    margin-left: 39px;
+}
 .banner-content, .banner-image {
     flex: 1;
 }
@@ -127,15 +131,18 @@
     font-size: 50px;
     line-height: 1.2;
     margin-bottom: 15px;
+            padding-left: 15px;
 }
 .banner-content p{
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.2;
+    padding-left: 15px;
 }
 
 .banner-image img{
     width: 100%;
     display: block;
+    
 }
 
 
@@ -151,8 +158,13 @@
 
 /* Responsiveness */
 /* phone size */
-@media (max-width: 768px) {
+@media(max-width: 768px) {
 
+    .container {
+        /* This prevents a horizontal scrollbar from the full-bleed image */
+        width: 100%;
+        /* overflow-x: clip; A modern way to hide overflow */
+    }
     .navbar-menu {
         display: none;
     }
@@ -165,6 +177,7 @@
     .nav-right{
         gap: 0;
     }
+
     /* Banner Responsive Styles */
     .banner-container {
         flex-direction: column;
@@ -175,15 +188,20 @@
     }
     .banner-image {
         order: 1; /* Image first */
-        margin-bottom: 0;
+        margin-bottom: 20px;
+        
     }
     .banner-content {
         order: 2; /* Content second */
     }
     .banner-content h2 {
-        font-size: 38px;
+        font-size: 36px;
     }
 
     /* plants section */
+
+}
+
+@media (min-width: 769px) and (max-width: 1920px) { 
 
 }
