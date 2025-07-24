@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px dotted red; */
 }
 /* Prevent any horizontal scrolling on the page ( it is responsive but ghost overflow happens) */
 /* html, body {
@@ -12,7 +13,7 @@
 
 /* container styles */
 .container {
-    max-width: 1400px;
+    max-width: 1220px;
     margin: 0 auto; 
     padding: 0 20px; 
 }
@@ -75,6 +76,14 @@
 .darkGray-clr {
     color: #111111;
 }
+.btn-primary{
+    background-color: #E95A08;
+    color: white;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    height: 40px;
+}
 
 /* main styles */
 
@@ -118,7 +127,7 @@
 .banner-container{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 .banner-image{
     width: 100vw;
@@ -131,30 +140,69 @@
     font-size: 50px;
     line-height: 1.2;
     margin-bottom: 15px;
-            padding-left: 15px;
+    padding-left: 5px;
 }
 .banner-content p{
     font-size: 17px;
     line-height: 1.2;
-    padding-left: 15px;
+    padding-left: 10px;
 }
-
 .banner-image img{
     width: 100%;
     display: block;
-    
 }
 
 
-    /* plants section */
+/* plants section */
+.plants-section{
+    padding: 70px 0;
+}
+.section-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+.section-title h2{
+    font-size: 50px;
+    margin-bottom: 16px;
+}
+.section-title p{
+    font-size: 22px;
+    margin-bottom: 35px;
+}
+.plant-card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.plant-card h3{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+.plant-card p{
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.plant-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.plant-img img {
+    width: 100%;
+}
 
 
     
-    /* section */
+/* section */
 
 
     
-    /*  section */
+/*  section */
 
 /* Responsiveness */
 /* phone size */
@@ -162,7 +210,7 @@
 
     .container {
         /* This prevents a horizontal scrollbar from the full-bleed image */
-        width: 100%;
+        /* width: 100%; */
         /* overflow-x: clip; A modern way to hide overflow */
     }
     .navbar-menu {
@@ -178,7 +226,7 @@
         gap: 0;
     }
 
-    /* Banner Responsive Styles */
+/* Banner Styles */
     .banner-container {
         flex-direction: column;
     }
@@ -198,10 +246,19 @@
         font-size: 36px;
     }
 
-    /* plants section */
-
+/* plants section */
+    .plant-container{
+    grid-template-columns:  repeat(2, 1fr);
+    gap: 25px;
+    }
+    .plant-card:nth-child(n + 7) {
+    display: none;
+    }
 }
 
-@media (min-width: 769px) and (max-width: 1920px) { 
-
+/* Tablet size */
+@media (min-width:769px) and (max-width: 1200px) {
+    .plant-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
