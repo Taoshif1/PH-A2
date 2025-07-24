@@ -5,13 +5,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Prevent any horizontal scrolling on the page ( it is responsive but ghost overflow happens) */
+/* html, body {
+    overflow-x: hidden;
+} */
+
 /* container styles */
 .container {
     max-width: 1400px;
     margin: 0 auto; 
     padding: 0 20px; 
 }
-
 /* shared styles */
 .inter-regular {
     font-family: "Inter", sans-serif;
@@ -87,7 +91,7 @@
     gap: 40px; 
 }
 .nav-right a, .nav-cart{
-    font-size: 1.2em;
+    font-size: 2em;
 }
 .navbar-menu {
     display: flex;
@@ -103,6 +107,9 @@
     align-items: center;
     gap: 8px;
 }
+.nav-logo img {
+    height: 90px;
+}
 
 /* banner styles */
 .banner-section {
@@ -117,19 +124,30 @@
     flex: 1;
 }
 .banner-content h2{
-    font-size: 55px;
+    font-size: 50px;
     line-height: 1.2;
     margin-bottom: 15px;
 }
 .banner-content p{
-    font-size: 20px;
-    line-height: 1.15;
+    font-size: 18px;
+    line-height: 1.2;
 }
 
 .banner-image img{
     width: 100%;
     display: block;
 }
+
+
+    /* plants section */
+
+
+    
+    /* section */
+
+
+    
+    /*  section */
 
 /* Responsiveness */
 /* phone size */
@@ -138,32 +156,34 @@
     .navbar-menu {
         display: none;
     }
+    .nav-logo img {
+    height: 70px;
+    }
     .nav-cart{
-        font-size: 1.6em;
+        font-size: 1.4em;
+    }
+    .nav-right{
+        gap: 0;
     }
     /* Banner Responsive Styles */
     .banner-container {
-        /* 1. Stack the items vertically */
         flex-direction: column;
     }
-    
-    /* 2. Reset the flex behavior to prevent overflow */
     .banner-content, .banner-image {
-        flex: none; /* This tells them to stop sharing space */
-        width: 100%; /* And just take up the full width */
+        flex: none; 
+        width: 100%; 
     }
-
-    /* 3. Set the visual order */
     .banner-image {
         order: 1; /* Image first */
-        margin-bottom: 30px;
+        margin-bottom: 0;
     }
     .banner-content {
         order: 2; /* Content second */
     }
-
     .banner-content h2 {
-        font-size: 30px;
+        font-size: 38px;
     }
+
+    /* plants section */
 
 }
