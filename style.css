@@ -1,0 +1,118 @@
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* container styles */
+.container {
+    max-width: 1400px;
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* shared styles */
+.inter-regular {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.inter-medium {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.inter-semi-bold {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.inter-bold {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+.noto-serif-regular {
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+.noto-serif-bold {
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+.orange-clr {
+    color: #E95A08;
+}
+.blackish-clr {
+    color: #252432;
+}
+.black-clr {
+    color: #000000;
+}
+.grayish-clr {
+    color: #8987A1;
+}
+.gray-clr {
+    color: gray;
+}
+.darkGray-clr {
+    color: #111111;
+}
+
+/* main styles */
+
+/* header styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+}
+.nav-right a, .nav-cart{
+    font-size: 1.8em;
+}
+.navbar-menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 50px;
+}
+.navbar-menu a {
+    text-decoration: none;
+}
+.nav-cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* Responsiveness */
+/* phone size */
+@media (max-width: 768px) {
+
+    .navbar-menu {
+        display: none;
+    }
+    .nav-cart{
+        font-size: 1.6em;
+    }
+}
