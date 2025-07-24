@@ -87,7 +87,7 @@
     gap: 40px; 
 }
 .nav-right a, .nav-cart{
-    font-size: 1.8em;
+    font-size: 1.2em;
 }
 .navbar-menu {
     display: flex;
@@ -104,6 +104,32 @@
     gap: 8px;
 }
 
+/* banner styles */
+.banner-section {
+    padding: 50px 0;
+}
+.banner-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.banner-content, .banner-image {
+    flex: 1;
+}
+.banner-content h2{
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+.banner-content p{
+    font-size: 20px;
+    line-height: 1.15;
+}
+
+.banner-image img{
+    width: 100%;
+    display: block;
+}
 
 /* Responsiveness */
 /* phone size */
@@ -115,4 +141,29 @@
     .nav-cart{
         font-size: 1.6em;
     }
+    /* Banner Responsive Styles */
+    .banner-container {
+        /* 1. Stack the items vertically */
+        flex-direction: column;
+    }
+    
+    /* 2. Reset the flex behavior to prevent overflow */
+    .banner-content, .banner-image {
+        flex: none; /* This tells them to stop sharing space */
+        width: 100%; /* And just take up the full width */
+    }
+
+    /* 3. Set the visual order */
+    .banner-image {
+        order: 1; /* Image first */
+        margin-bottom: 30px;
+    }
+    .banner-content {
+        order: 2; /* Content second */
+    }
+
+    .banner-content h2 {
+        font-size: 30px;
+    }
+
 }
