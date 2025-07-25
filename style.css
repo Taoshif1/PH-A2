@@ -201,11 +201,54 @@ html, body {
 }
 
 
-    
-/* plants lover section */
+/* Plants Lover Section */
+.lover-section {
+    padding: 80px 0;
+}
+.lover-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.lover-image {
+    flex: 1;
+    position: relative;
+}
+.lover-main-img {
+    width: 100%;
+    display: block;
+}
+.trusted-badge {
+    position: absolute;
+    top: -150px; 
+    right: -120px;
+    width: 300px; 
+}
+
+.lover-content {
+    flex: 1;
+}
+.lover-content h2 {
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+.lover-content ul {
+    /* list-style-position: inside; */
+    padding-left: 0;
+}
+.lover-content li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 22px;
+}
 
 
-    
+/* latest deal section */
+
+
+
+
 /* Join Section */
 .join-section {
     position: relative;
@@ -262,10 +305,6 @@ html, body {
     white-space: nowrap; 
     width: 40%;
 }
-/*  section */
-
-
-
 
 /* Footer Section */
 
@@ -357,6 +396,26 @@ html, body {
     }
     .plant-card:nth-child(n + 7) {
         display: none;
+    }
+
+/* plants lover sec */
+    .lover-container {
+        flex-direction: column;
+        text-align: left; 
+        margin: -50px 20px;
+    }
+
+    .trusted-badge {
+        display: none;
+    }
+
+    .lover-content h2 {
+        font-size: 34px;
+        margin: -15px -10px 15px;
+    }
+    .lover-content li {
+        margin-left: 20px;
+        font-size: 20px;
     }
 
 /* join section */
