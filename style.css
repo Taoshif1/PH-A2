@@ -267,8 +267,41 @@ html, body {
 
 
 
-/* section */
+/* Footer Section */
 
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-bottom: 40px;
+    flex-wrap: wrap; 
+}
+.footer-about {
+    max-width: 300px;
+}
+.logo {
+    margin-bottom: 10px;
+}
+.footer-links-column ul, .icons ul {
+    list-style: none; 
+}
+.footer-links-column a, .icons a {
+    display: block;
+    color: #8987A1;
+    font-size: 20px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+.footer-links-column a:hover, .icons a:hover {
+    color: #E95A08;
+}
+.footer-container div:last-child {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
 
 
 /* Responsiveness */
@@ -341,6 +374,35 @@ html, body {
         .join-form button {
             width: 30%;
     }
+
+    /* footer sec */
+    .footer-container {
+        flex-direction: column;
+        align-items: left; 
+        text-align: left;
+        gap: 0;
+    }
+    .logo{
+        justify-content: lef;
+        text-align: left;
+        margin-top: -40px;
+        margin-bottom: 10px;
+    }
+    .footer-about {
+        display: flex;
+        flex-direction: column;
+        margin: 5px 0;
+        justify-content: left;
+        
+    }
+    .footer-container div:last-child {
+        justify-content: center; /* Center the icons within their row */
+    }
+    .icons{
+        margin-top: 10px;
+    }
+
+
 }
 
 /* Tablet size */
