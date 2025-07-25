@@ -243,23 +243,92 @@ html, body {
     font-size: 22px;
 }
 
-
-/* latest deal section */
-
-
-
+/* Latest Deals Section */
+.deals-section {
+    padding: 20px 0;
+}
+.dealsec-title {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+}
+.dealsec-title h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+.dealsec-title p {
+    font-size: 18px;
+}
+.deals-grid-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    height: 450px;
+}
+.deal-card {
+    position: relative;
+    color: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.deal-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.deal-card-large {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+.deal-text, .deal-text-large {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%; 
+    z-index: 2; 
+}
+.deal-text h4{ 
+    font-size: 24px;
+    margin-bottom: 10px; 
+}
+.deal-text-large h3 { 
+    font-size: 28px; 
+}
+.deal-text p { 
+    font-size: 20px;
+    text-decoration: underline; 
+    cursor: pointer; 
+}
+.deal-text-large p { 
+    font-size: 25px;
+    text-decoration: underline; 
+    cursor: pointer; 
+    margin-top: 10px;
+}
+.deal-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
 
 /* Join Section */
 .join-section {
     position: relative;
     margin: 80px 0;
 }
-
 .join-bg-img {
     width: 100%;
     display: block;
 }
-
 .join-content {
     position: absolute;
     top: 50%;
@@ -270,7 +339,6 @@ html, body {
     text-align: center;
     padding: 0 20px; 
 }
-
 .join-content h2 {
     font-size: 40px;
     letter-spacing: 1.2px;
@@ -278,7 +346,6 @@ html, body {
     margin-bottom: 30px;
     color: #FFF; 
 }
-
 .join-form {
     display: flex;
     max-width: 550px;
@@ -404,11 +471,9 @@ html, body {
         text-align: left; 
         margin: -50px 20px;
     }
-
     .trusted-badge {
         display: none;
     }
-
     .lover-content h2 {
         font-size: 34px;
         margin: -15px -10px 15px;
@@ -430,7 +495,7 @@ html, body {
     .join-form input {
         width: 80%; 
     }
-        .join-form button {
+    .join-form button {
             width: 30%;
     }
 
@@ -461,6 +526,15 @@ html, body {
         margin-top: 10px;
     }
 
+/* latest deals sec */
+    .deals-grid-container {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .deal-card-large {
+        grid-column: auto;
+        grid-row: auto;
+    }
 
 }
 
